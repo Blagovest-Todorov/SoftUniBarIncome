@@ -7,7 +7,6 @@ namespace SoftUniBarIncome
     {
         static void Main(string[] args)
         {
-
             string pattern = @"^[^|$%.]*%(?<customer>[A-Z][a-z]+)%[^|$%.]*<(?<product>\w+)>[^|$%.]*\|(?<qtity>\d+)\|[^|$%.]*?(?<price>\d+\.?\d*)[^|$%.]*\$";
 
             Regex regex = new Regex(pattern);
@@ -37,8 +36,7 @@ namespace SoftUniBarIncome
                 double totalCustomerIncome = price * quantity;
                 income += totalCustomerIncome;
 
-                Console.WriteLine($"{customer}: {product} - {totalCustomerIncome:F2}");               
- 
+                Console.WriteLine($"{customer}: {product} - {totalCustomerIncome:F2}");  
             }
 
             Console.WriteLine($"Total income: {income:F2}");
